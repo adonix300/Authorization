@@ -20,13 +20,7 @@ public class AuthorizationController {
     }
 
     @GetMapping("/authorize")
-    public List<Authorities> getAuthorities(@Valid User user) {
-        return service.getAuthorities(user.getName(), user.getPassword());
+    public List<Authorities> getAuthorities(@RequestParam("user") String user, @RequestParam("password") String password) {
+        return service.getAuthorities(user, password);
     }
-
-
-//    @GetMapping("/authorize")
-//    public List<Authorities> getAuthorities(@RequestParam("user") String user, @RequestParam("password") String password) {
-//        return service.getAuthorities(user, password);
-//    }
 }
