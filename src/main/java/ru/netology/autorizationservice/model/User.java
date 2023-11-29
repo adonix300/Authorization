@@ -4,32 +4,32 @@ import jakarta.validation.constraints.NotBlank;
 
 public class User {
     @NotBlank
-    private String name;
+    private String user;
     @NotBlank
     private String password;
     private Authorities[] authorities;
+
     public User() {
     }
 
 
-
-    public User(String name, String password) {
-        this.name = name;
+    public User(String user, String password) {
+        this.user = user;
         this.password = password;
     }
 
-    public User(String name, String password, Authorities[] authorities) {
-        this.name = name;
+    public User(String user, String password, Authorities[] authorities) {
+        this.user = user;
         this.password = password;
         this.authorities = authorities;
     }
 
-    public String getName() {
-        return name;
+    public String getUser() {
+        return user;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setUser(String user) {
+        this.user = user;
     }
 
     public String getPassword() {
