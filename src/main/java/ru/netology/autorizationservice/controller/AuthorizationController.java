@@ -21,7 +21,7 @@ public class AuthorizationController {
 
     @GetMapping("/authorize")
     public List<Authorities> getAuthorities(@Valid User user) {
-        return service.getAuthorities(user.getName(), user.getPassword());
+        return service.getAuthorities(user);
     }
 
 
